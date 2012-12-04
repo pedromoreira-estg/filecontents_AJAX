@@ -85,7 +85,8 @@ header("Pragma: no-cache");										// HTTP/1.0
 				objAJAX.onreadystatechange = function () {
 					// a var reservada 'this' corresponde ao objecto onde o evento ocorreu
 					// the reserved var 'this' is the object where the event was triggered
-					if (this.readyState == 4) {
+					debugger;
+					if (this.readyState == 4 && this.status == 200) {
 						thedivcontent.innerHTML = this.responseText;
 					}
 				}

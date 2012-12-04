@@ -73,13 +73,13 @@ header("Pragma: no-cache");										// HTTP/1.0
 			}
 
 			function fillcontent(file, thedivcontent) {
-				//debugger;
+				debugger;
 				// instancia um objecto 'ajax'
 				// instantiates an 'ajax' object
 				var objAJAX = ajax();
 				// define o pedido : método, url, assincrono
 				// sets the request: method, url, asynchronous
-				objAJAX.open('POST','getfilecontentPOST.php',true);
+				objAJAX.open('POST','getfilecontentPOSTXML.php',true);
 				
 				//---
 				objAJAX.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
@@ -91,6 +91,7 @@ header("Pragma: no-cache");										// HTTP/1.0
 				// refgista a funcao que ira processar o pedido
 				// registers and defines the function that will process the request
 				objAJAX.onreadystatechange = function () {
+					debugger;
 					// a var reservada 'this' corresponde ao objecto onde o evento ocorreu
 					// the reserved var 'this' is the object where the event was triggered
 					if (this.readyState == 4) {
