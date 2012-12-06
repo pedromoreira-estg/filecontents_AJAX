@@ -79,7 +79,10 @@ header("Pragma: no-cache");										// HTTP/1.0
 				var objAJAX = ajax();
 				// define o pedido : método, url, assincrono
 				// sets the request: method, url, asynchronous
-				objAJAX.open('POST','getfilecontentPOSTXML.php',true);
+				// *** TEXT VERSION ***
+				objAJAX.open('POST','getfilecontentPOST.php',true);
+				// *** XML VERSION ***
+				//objAJAX.open('POST','getfilecontentPOSTXML.php',true);
 				
 				//---
 				objAJAX.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
@@ -95,7 +98,10 @@ header("Pragma: no-cache");										// HTTP/1.0
 					// a var reservada 'this' corresponde ao objecto onde o evento ocorreu
 					// the reserved var 'this' is the object where the event was triggered
 					if (this.readyState == 4) {
+						// **** TEXT VERSION ****
 						thedivcontent.innerHTML = this.responseText;
+						// **** XML VERSION ****
+						// doSomethingWithXML(this.responseXML); // not implemented
 					}
 				}
 				// faz o pedido com dados (POST)
