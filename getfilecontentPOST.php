@@ -11,12 +11,6 @@ if (!empty($file)) {
 	$content = file_get_contents($dirpref.$file);
 }
 
-header("Content-Type: application/xml:");
-
-echo "<filecontent>";
-echo "<filename>$file</filename>";
-echo "<content>";
 echo $content;
-echo "</content>";
-echo "</filecontent>"
+
 ?>
