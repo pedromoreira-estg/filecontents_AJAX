@@ -13,7 +13,8 @@ clicks toggles the file contents (shown / not shown)
 
 * [files] -- directory with files
 * [getfilecontentsGET.php] -- receives a 'f' parameter (GET) with filename and returns filecontent
-* [getfilecontentsGET.php] -- receives a 'f' parameter (POST) with filename and returns filecontent
+* [getfilecontentsPOST.php] -- receives a 'f' parameter (POST) with filename and returns filecontent
+* [getfilecontentsPOSTXML.php] -- receives a 'f' parameter (POST) with filename and returns filecontent XML format
 * [listfilesGET.php] -- list directory entries, requests (AJAX - GET) file content on demand (click)
 * [listfilesPOST.php] -- list directory entries, requests (AJAX - POST) file content on demand (click)
 
